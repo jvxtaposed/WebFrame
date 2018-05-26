@@ -1,0 +1,64 @@
+<!-- HackXX_Tutorial About Page -->
+
+{%  extends 'header.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<header class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="/">Colony Counter</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/uploads/simple/">Upload</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<br><br>
+<center>
+<div class = "sideby">
+    <img src="{% static 'images/test2.png' %}"/>
+    <img src="{% static 'images/test2out.png' %}"/>
+    <br><br></div>
+    <div class ="sidebyW">
+        <figure class = "col-md-10"
+    <p style="font-size: 1.45rem">By applying countours over a binary image of the cell culture, our application gives a close approximation of the number of colonies. 
+    <a href="/uploads/simple/">Try now.</a></p>
+    </p>    </figure>
+</div>
+</center>
+<br><br>
+
+<center>
+<section class="container">
+    <div class="row">
+        <figure class="jumbotron">
+                
+            <h2>acknowledgements</h2>
+            <img src="{% static 'images/bottomphoto.jpg' %}" /></a>
+            <p>Our web application was made possible by OpenCV (Open Source Computer Vision Library). Specifically the image processing open functions in OpenCV for python which uses contours to find the continuous points of pixels with the same colors or intensities. We are happy to share with you our first python and django project collaboration. 
+                <a href="http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_contours/py_contours_begin/py_contours_begin.html">Learn more about OpenCV.</a></p>
+        </figure>
+    </div>
+</center>
+</section>
+
+{% endblock %}
